@@ -285,7 +285,7 @@ body {
   border-radius: 2px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #logo {
     display: none;
   }
@@ -350,3 +350,4 @@ body {
     margin-top: 10px;
   }
 }
+
