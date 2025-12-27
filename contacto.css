@@ -197,7 +197,7 @@ button.botonPersonalizado:hover {
   background-color: white;
   border-radius: 2px;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   /* NAVBAR: apilar verticalmente */
   #logo {
     display: none;
@@ -251,3 +251,4 @@ button.botonPersonalizado:hover {
     margin-top: 10px;
   }
 }
+
