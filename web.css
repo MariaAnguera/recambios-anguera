@@ -1,0 +1,352 @@
+/* Body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Barra de navegación */
+#navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: hsl(0, 0%, 20%);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+#logo {
+  display: flex; /* Para centrar el contenido dentro */
+  align-items: center;
+}
+.imgLogo {
+  height: 45px;
+  border-radius: 50%;
+}
+#elementosNav {
+  display: flex;
+  align-items: center;
+}
+
+#linksNav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 70px;
+}
+
+#linksNav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+#linksNav a:hover {
+  color: #880f17;
+}
+
+#carrito {
+  margin-left: 20px;
+}
+#carrito i {
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#carrito i:hover {
+  color: #880f17;
+}
+
+/* Portada */
+#inicio {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+#fotoInicio {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center; /* centra horizontalmente */
+  overflow: hidden;
+  text-align: center;
+}
+
+#fotoInicio img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#fotoInicio h2,
+#fotoInicio p {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+#fotoInicio h2 {
+  font-size: 30px;
+}
+
+#fotoInicio p {
+  font-size: 22px;
+}
+
+/* Tarjetas de productos */
+#catalogo h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  margin: 100px 0 70px 0;
+}
+
+#tarjetasProductos {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.cajaProductos {
+  width: 280px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.cajaProductosRotacion {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.cajaProductos:hover .cajaProductosRotacion {
+  transform: rotateY(180deg);
+}
+
+.cajaProductosDelante,
+.cajaProductosDetras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cajaProductosDelante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cajaProductosDetras {
+  background-color: #f2f2f2;
+  color: #000;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.cajaProductosDetras h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  color: #880f17;
+}
+
+.cajaProductosDetras p {
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Información adicional sobre devoluciones, envío y garantía */
+#infoAdicional {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 140px 20px; /* agrega padding inferior y superior */
+  text-align: center;
+  background: linear-gradient(to top, #d8d7d7 0%, #e6e5e5 30%, #ffffff 100%);
+}
+
+.ventaja {
+  width: 300px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: #ededed;
+  border-radius: 10px;
+}
+
+.ventaja i {
+  font-size: 40px;
+  color: #880f17;
+}
+
+.ventaja h3 {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.ventaja p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Pie de página */
+#pieDePagina {
+  background: linear-gradient(to right, #1a1a1a, #5e5e5e);
+  color: white;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+  padding: 30px 20px 5px 20px;
+}
+
+#contenedorFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#footerIzquierda,
+#footerDerecha {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#footerIzquierda h4,
+#footerDerecha h4 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 10px;
+}
+#footerIzquierda p {
+  font-size: 13px;
+  margin-top: 85px;
+}
+.redes {
+  display: flex;
+  gap: 9px;
+}
+.redSocial {
+  color: white;
+  font-size: 30px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.redSocial:hover {
+  color: #880f17;
+}
+
+#mapa {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+}
+
+#menuDesplegable {
+  display: none;
+}
+
+/* Icono hamburguesa para pantallas pequeñas */
+.hamburguesa {
+  display: none; /* por defecto está oculto */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+  #logo {
+    display: none;
+  }
+  .hamburguesa {
+    display: flex;
+    order: -1;
+  }
+  #navegacion {
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+  }
+  #linksNav {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: hsl(0, 0%, 20%);
+    flex-direction: column;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: max-height 0.3s ease;
+    z-index: 100;
+  }
+  /* Cuando se activa checkbox, mostrar menú */
+  #menuDesplegable:checked ~ #elementosNav #linksNav {
+    max-height: 500px;
+  }
+
+  #linksNav li {
+    text-align: center;
+  }
+
+  #carrito {
+    margin-right: 0;
+  }
+
+  #tarjetasProductos .cajaProductos,
+  #footerIzquierda,
+  #footerDerecha {
+    width: 100%;
+  }
+
+  #fotoInicio h2 {
+    font-size: 22px;
+  }
+
+  #fotoInicio p {
+    font-size: 16px;
+  }
+  #infoAdicional {
+    flex-direction: column;
+    margin-top: 90px;
+  }
+
+  .ventaja {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  #footerIzquierda p {
+    margin-top: 10px;
+  }
+}

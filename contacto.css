@@ -1,0 +1,253 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================== NAVBAR ================== */
+#navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: hsl(0, 0%, 20%);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+#logo {
+  display: flex; /* Para centrar el contenido dentro */
+  align-items: center;
+}
+.imgLogo {
+  width: auto;
+  height: 45px;
+  border-radius: 50%;
+}
+#elementosNav {
+  display: flex;
+  align-items: center;
+}
+
+#linksNav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 70px;
+}
+
+#linksNav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+#linksNav a:hover {
+  color: #880f17;
+}
+
+#carrito {
+  margin-left: 20px;
+}
+#carrito i {
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#carrito i:hover {
+  color: #880f17;
+}
+
+/* Contenedor del formulario */
+#tarjetaContacto {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.formulario {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid rgb(133, 132, 132);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  width: 90%;
+  max-width: 450px;
+  color: black;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  margin-top: 90px;
+}
+
+#tituloformulario {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #880f17;
+}
+.tituloInput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.fila {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.fila input,
+.fila textarea {
+  flex: 1;
+}
+button.botonPersonalizado {
+  display: block;
+  margin: auto;
+  background-color: #880f17; /* tu color personalizado */
+  border: none; /* quitar borde si quieres */
+  color: #fff; /* color del texto */
+  font-size: 16px;
+  width: 70%;
+  height: 80%;
+  border-radius: 10px;
+  transition: background-color 0.7s;
+}
+button.botonPersonalizado:hover {
+  background-color: black;
+}
+
+/* Footer completo */
+#pieDePagina {
+  background: linear-gradient(to right, #1a1a1a, #5e5e5e);
+  color: white;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+  padding: 30px 20px 5px 20px;
+}
+
+#contenedorFooter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#footerIzquierda,
+#footerDerecha {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#footerIzquierda h4,
+#footerDerecha h4 {
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 10px;
+}
+#footerIzquierda p {
+  font-size: 13px;
+  margin-top: 85px;
+}
+.redes {
+  display: flex;
+  gap: 9px;
+}
+.redSocial {
+  color: white;
+  font-size: 30px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.redSocial:hover {
+  color: #880f17;
+}
+.footerIzquierda p {
+  font-size: 17px;
+  margin-top: 85px;
+}
+
+#mapa {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+}
+
+#menuDesplegable {
+  display: none;
+}
+
+/* Icono hamburguesa */
+.hamburguesa {
+  display: none; /* por defecto oculto */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburguesa span {
+  display: block;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+@media (max-width: 600px) {
+  /* NAVBAR: apilar verticalmente */
+  #logo {
+    display: none;
+  }
+  .hamburguesa {
+    display: flex;
+    order: -1;
+  }
+  #navegacion {
+    justify-content: space-between; /* para separar la hamburguesa del carrito */
+    padding: 10px 20px;
+    position: relative;
+  }
+  #linksNav {
+    position: absolute;
+    top: 40px; /* justo debajo de la hamburguesa */
+    left: 0; /* alineado a la izquierda del nav */
+    background-color: hsl(0, 0%, 20%);
+    flex-direction: column;
+    width: 200px; /* puedes ajustar */
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: max-height 0.3s ease;
+    z-index: 100;
+  }
+  /* Cuando se activa checkbox, mostrar menú */
+  #menuDesplegable:checked ~ #elementosNav #linksNav {
+    max-height: 500px; /* ajusta según número de enlaces */
+  }
+
+  #linksNav li {
+    text-align: center;
+  }
+
+  #carrito {
+    margin-right: 0;
+  }
+
+  .formulario {
+    width: 90%;
+    margin-top: 40px;
+    padding: 15px;
+  }
+
+  #footerIzquierda,
+  #footerDerecha {
+    width: 100%;
+  }
+  #footerIzquierda p {
+    margin-top: 10px;
+  }
+}
